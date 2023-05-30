@@ -10,23 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace To_do_thing
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Логика взаимодействия для Create_Card.xaml
+    /// </summary>
+    public partial class CreateCard : Window
     {
-        public MainWindow()
+        public CreateCard()
         {
             InitializeComponent();
-        }
-
-        private void add_tack_Click(object sender, RoutedEventArgs e)
-        {
-            CreateCard createCard = new CreateCard();
-            createCard.Show();
-            Hide();
         }
     }
 }

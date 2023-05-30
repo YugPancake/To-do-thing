@@ -4,9 +4,24 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:To_do_thing"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="To-do thing" Height="600" Width="800" WindowStyle="ThreeDBorderWindow" FontFamily="Bahnschrift" Background="#FFE5E5E5" ResizeMode="NoResize">
+    <Grid x:Name="MainPage" Height="575" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Rectangle x:Name="to_do" Margin="47,0,0,0" RenderTransformOrigin="0.185,-0.32" Fill="White" HorizontalAlignment="Left" Width="210" Height="477" VerticalAlignment="Center"/>
+        <Rectangle x:Name="in_progress" HorizontalAlignment="Center" Width="210" RenderTransformOrigin="0.185,-0.32" Fill="White" Grid.Column="1" Height="478" VerticalAlignment="Center"/>
+        <Rectangle x:Name="done" Margin="10,0,0,0" RenderTransformOrigin="0.185,-0.32" Fill="White" Grid.Column="2" HorizontalAlignment="Left" Width="210" Height="477" VerticalAlignment="Center"/>
+        <TextBlock x:Name="to_do_text" HorizontalAlignment="Left" Margin="70,60,0,0" TextWrapping="Wrap" Text="To Do" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <TextBlock x:Name="in_progress_text" HorizontalAlignment="Left" Margin="48,60,0,0" TextWrapping="Wrap" Text="In Progress" FontSize="20" FontWeight="Bold" Grid.Column="1" RenderTransformOrigin="0.391,0.554" Height="24" VerticalAlignment="Top"/>
+        <TextBlock x:Name="done_text" HorizontalAlignment="Left" Margin="32,60,0,0" TextWrapping="Wrap" Text="Done" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Grid.Column="2" RenderTransformOrigin="0.391,0.554" />
+        <Rectangle x:Name="line" HorizontalAlignment="Left" Height="2" Margin="47,89,0,0" VerticalAlignment="Top" Width="210" Fill="#FFE5E5E5" Grid.Column="0"/>
+        <Button x:Name="add_tack" Grid.Column="2" Content="Add task" HorizontalAlignment="Left" Margin="123,18,0,0" VerticalAlignment="Top" Background="#FFFDD36B" Foreground="Black" Width="97" Height="26" FontSize="16" Click="add_tack_Click" BorderBrush="Transparent"/>
+        <Rectangle x:Name="line_Copy" HorizontalAlignment="Center" Height="2" Margin="0,89,0,0" VerticalAlignment="Top" Width="210" Fill="#FFE5E5E5" Grid.Column="1"/>
+        <Rectangle x:Name="line_Copy1" HorizontalAlignment="Left" Height="2" Margin="10,89,0,0" VerticalAlignment="Top" Width="210" Fill="#FFE5E5E5" Grid.Column="2"/>
     </Grid>
 </Window>
